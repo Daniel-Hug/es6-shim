@@ -19,7 +19,7 @@ var main = function() {
 
   var globals = (typeof global === 'undefined') ? window : global;
   var global_isFinite = globals.isFinite;
-  var supportsDescriptors = !!Object.defineProperty && arePropertyDescriptorsSupported();
+  var supportsDescriptors = Object.defineProperty && arePropertyDescriptorsSupported();
 
   // Define configurable, writable and non-enumerable props
   // if they don’t exist.
